@@ -1,0 +1,16 @@
+<div class="container">
+<h2> Create a new Comment </h2>
+
+<form class="new_comment" action='/create_comment' method="POST">
+    <p> 
+      <label class="body_label" for="body">Body</label>
+      <textarea class="body_text" name="body" rows="10" cols="30"></textarea>
+    </p>
+    <p>
+      <input type="submit" value="Create your Comment"/>
+      <input type="hidden" value="<%=@post_id%>" name="post_id"/>
+    </p> 
+</form> 
+<a href="/"><button>Return Home</button></a>
+
+</div>

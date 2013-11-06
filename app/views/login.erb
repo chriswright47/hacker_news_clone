@@ -1,0 +1,46 @@
+
+<div class="container">
+<h2> Login </h2>
+
+<form class="login" action='/login' method="POST">
+    <p>
+      <label class="email_label" for="email">email</label>
+      <input type="text" name="email"/>
+    </p>
+    <p> 
+      <label class="password_label" for="password">password</label>
+      <input type='password' class="password_text" name="password"/>
+    </p>
+    <p>
+      <input type="submit" value="Login"/>
+    </p> 
+</form> 
+
+<h2> Sign Up </h2>
+<form class="signup" action="/sign_up" method="POST">
+    <p>
+      <label class="user_label" for="username">Enter Username</label>
+      <input type="text" name="username"/>
+    </p>
+    <p>
+      <label class="email_label" for="email">Enter Email</label>
+      <input type="text" name="email"/>
+    </p>
+    <p> 
+      <label class="password_label" for="password">Choose Password</label>
+      <input type='password' class="password_text" name="password"/>
+    </p>
+    <p>
+      <label class="confirm_passwor" for="confirm_pass">Re-enter your Password</label>
+      <input type="password" class="password_text" name="confirm_pass"/>
+    </p>
+    <p>
+      <input type="submit" value="Sign Up"/>
+    </p> 
+</form> 
+
+
+
+<a href="/"><button>Return Home</button></a>
+
+</div>

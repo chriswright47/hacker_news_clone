@@ -1,0 +1,25 @@
+<div class="container">
+<div id="title_bar">
+<h3>AskChris.com</h3>
+  <ul>
+    <% if session[:user_id] %>
+    <li><a href="/new_post">New Post</a></li>
+    <% end %>
+    <li><a href="/comments">Comments</a></li>
+    <% unless session[:user_id] %>
+    <li><a href="/sign_in">Sign In</a></li>
+    <% end %>
+    <% if session[:user_id] %>
+    <li><a href="/log_out">Log Out</a></li>
+    <% end %>
+  </ul>
+</div>
+
+
+  <ol class="post_list">
+    <%@posts.each do |post|%>
+    <li><i data-post-id='<%= post.id %>' class="fa fa-magic post_vote"></i><a href="/post/<%= post.id %>"><%= post.title %></a></li>
+    <%end%>
+  </ol>   
+
+</div>

@@ -1,0 +1,16 @@
+<div class='container'>
+<h3>Recent comments</h3>
+
+<ol>
+  <% @comments.each do |comment| %>
+    <ul class="comment_header">
+      <li><a href="/users/<%= comment.user_id %>" class='comment_owner'><%= User.find(comment.user_id).name %></a></li>
+      <li> on: <a href="/post/<%=comment.post_id%>" class='post_title'><%=Post.find(comment.post_id).title %></a>
+    </ul>
+    <li class='comment'><i data-comment-id='<%= comment.id %>' class="fa fa-magic comment_vote"></i><%= comment.body %></li>
+    <% end %>
+</ol>
+
+<a href="/"><button>Home</button></a>
+
+</div>
